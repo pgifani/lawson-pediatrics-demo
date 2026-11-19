@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dr. Emma Lawson, MD | Pediatrician in Austin, TX</title>
+<meta name="description" content="Warm, expert pediatric care for newborns, children, and teens in South Austin. Book online with Dr. Emma Lawson." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#2B2A40',
+          'ink-soft': '#6B6885',
+          teal: { DEFAULT: '#6C5CE7', deep: '#5244B8', soft: '#EBE9FB' },
+          marigold: { DEFAULT: '#F6A08C', soft: '#FCE6DD' },
+          coral: '#F07A8E',
+          sage: '#F0EFF9',
+          paper: '#FDFDFF',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{
+    --teal:#6C5CE7; --teal-deep:#5244B8; --teal-soft:#EBE9FB;
+    --marigold:#F6A08C; --marigold-soft:#FCE6DD; --coral:#F07A8E;
+    --ink:#2B2A40; --ink-soft:#6B6885; --sage:#F0EFF9; --paper:#FDFDFF;
+    --shadow-soft:0 14px 30px -16px rgba(84,72,160,.32), inset 0 2px 2px rgba(255,255,255,.85), inset 0 -9px 18px -10px rgba(84,72,160,.16);
+    --shadow-lift:0 30px 58px -26px rgba(84,72,160,.42), inset 0 3px 3px rgba(255,255,255,.9), inset 0 -14px 26px -14px rgba(84,72,160,.18);
+    --shadow-marigold:0 16px 30px -14px rgba(246,160,140,.5), inset 0 2px 1px rgba(255,255,255,.55), inset 0 -8px 16px -8px rgba(190,95,70,.4);
+    --r-card:30px; --r-lg:36px;
+  }
+  *{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Plus Jakarta Sans',sans-serif; color:var(--ink);
+    background:var(--sage); overflow-x:hidden;
+  }
+  h1,h2,h3,.font-display{ font-family:'Fraunces',serif; font-optical-sizing:auto; font-variation-settings:'SOFT' 40,'WONK' 0; letter-spacing:-0.015em; }
+  ::selection{ background:var(--marigold-soft); color:var(--ink); }
+
+  /* soft ambient background glows + grain */
+  .bg-canvas{ position:fixed; inset:0; z-index:-2; pointer-events:none;
+    background:
+      radial-gradient(60% 45% at 82% 8%, rgba(246,160,140,.16), transparent 60%),
+      radial-gradient(55% 40% at 8% 22%, rgba(108,92,231,.12), transparent 60%),
+      radial-gradient(70% 55% at 50% 100%, rgba(108,92,231,.10), transparent 65%),
+      var(--sage);
+  }
+  .bg-grain{ position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+
+  /* buttons */
+  .btn{ display:inline-flex; align-items:center; gap:.55rem; font-weight:600; border-radius:999px;
+    padding:.85rem 1.5rem; transition:transform .18s cubic-bezier(.34,1.56,.64,1), box-shadow .2s, background .2s; cursor:pointer; line-height:1; }
+  .btn:active{ transform:translateY(1px) scale(.99); }
+  .btn-primary{ background:var(--teal); color:#fff; box-shadow:var(--shadow-soft); }
+  .btn-primary:hover{ background:var(--teal-deep); transform:translateY(-2px); box-shadow:var(--shadow-lift); }
+  .btn-sun{ background:var(--marigold); color:var(--ink); box-shadow:var(--shadow-marigold); }
+  .btn-sun:hover{ transform:translateY(-2px); filter:brightness(1.03); }
+  .btn-ghost{ background:rgba(255,255,255,.7); color:var(--teal-deep); border:1.5px solid rgba(108,92,231,.25); backdrop-filter:blur(6px); }
+  .btn-ghost:hover{ border-color:var(--teal); background:#fff; transform:translateY(-2px); }
+
+  .eyebrow{ display:inline-flex; align-items:center; gap:.5rem; color:var(--teal-deep); font-weight:600; font-size:.95rem; }
+  .eyebrow svg{ color:var(--marigold); }
+
+  .card{ background:var(--paper); border-radius:var(--r-card); box-shadow:var(--shadow-soft); }
+
+  /* organic blob */
+  .blob{ border-radius:42% 58% 56% 44% / 48% 42% 58% 52%; }
+
+  /* focus visibility */
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+    outline:3px solid var(--marigold); outline-offset:2px; border-radius:8px;
+  }
+
+  /* nav link underline */
+  .nav-link{ position:relative; color:var(--ink-soft); font-weight:500; transition:color .2s; }
+  .nav-link:hover{ color:var(--teal-deep); }
+  .nav-link::after{ content:''; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:var(--marigold); transition:width .25s; border-radius:2px; }
+  .nav-link:hover::after{ width:100%; }
+
+  /* form fields */
+  .field{ width:100%; background:#eef5f2; border:1.5px solid transparent; border-radius:16px;
+    padding:.85rem 1rem; font-size:.98rem; color:var(--ink); transition:border-color .18s, box-shadow .18s, background .18s;
+    box-shadow:inset 0 3px 6px -2px rgba(84,72,160,.16), inset 0 -2px 3px rgba(255,255,255,.7); }
+  .field::placeholder{ color:#9aada6; }
+  .field:focus{ background:#fff; border-color:var(--teal); outline:none; box-shadow:inset 0 2px 4px rgba(84,72,160,.08), 0 0 0 4px rgba(108,92,231,.14); }
+  .field.err{ border-color:#e26d5c; box-shadow:inset 0 2px 4px rgba(226,109,92,.12), 0 0 0 4px rgba(226,109,92,.14); }
+
+  /* claymorphism: puffy booking chips, slots, visit-type buttons & icon badges */
+  #dayRow button, #slotPanel button, #visitType .vt-btn{ box-shadow:0 9px 18px -9px rgba(84,72,160,.32), inset 0 2px 2px rgba(255,255,255,.7), inset 0 -5px 11px -5px rgba(84,72,160,.18); }
+  #visitType .vt-btn{ border-radius:20px; }
+  [class~="place-items-center"]{ box-shadow:inset 0 2px 2px rgba(255,255,255,.45), inset 0 -4px 7px -3px rgba(40,34,70,.2); }
+  .lbl{ font-weight:600; font-size:.9rem; color:var(--ink); margin-bottom:.35rem; display:block; }
+  .req{ color:var(--coral); }
+
+  .pill-select{ display:flex; flex-wrap:wrap; gap:.5rem; }
+  .pill-select input{ position:absolute; opacity:0; width:0; height:0; }
+  .pill-select label{ cursor:pointer; padding:.5rem .9rem; border-radius:999px; border:1.5px solid rgba(43,42,64,.14);
+    background:#fff; font-size:.9rem; font-weight:500; transition:all .18s; }
+  .pill-select input:checked + label{ background:var(--teal-soft); border-color:var(--teal); color:var(--teal-deep); font-weight:600; }
+  .pill-select input:focus-visible + label{ outline:3px solid var(--marigold); outline-offset:2px; }
+
+  /* accordion */
+  .acc-item{ border-bottom:1px solid rgba(43,42,64,.10); }
+  .acc-btn{ width:100%; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:1rem;
+    padding:1.25rem 0; font-weight:600; font-size:1.08rem; color:var(--ink); cursor:pointer; }
+  .acc-icon{ flex:none; width:30px; height:30px; border-radius:999px; background:var(--teal-soft); color:var(--teal-deep);
+    display:grid; place-items:center; transition:transform .3s, background .2s; }
+  .acc-btn[aria-expanded="true"] .acc-icon{ transform:rotate(45deg); background:var(--marigold); color:var(--ink); }
+  .acc-panel{ overflow:hidden; max-height:0; transition:max-height .35s ease; }
+  .acc-panel p{ padding-bottom:1.25rem; color:var(--ink-soft); line-height:1.7; max-width:60ch; }
+
+  /* reveal */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* hero entrance */
+  @keyframes rise{ from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:none;} }
+  @keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-10px);} }
+  @keyframes sway{ 0%,100%{ transform:rotate(-2deg);} 50%{ transform:rotate(2deg);} }
+  .hero-rise > *{ animation:rise .8s both; }
+  .hero-rise > *:nth-child(1){ animation-delay:.05s; }
+  .hero-rise > *:nth-child(2){ animation-delay:.15s; }
+  .hero-rise > *:nth-child(3){ animation-delay:.25s; }
+  .hero-rise > *:nth-child(4){ animation-delay:.35s; }
+  .hero-rise > *:nth-child(5){ animation-delay:.45s; }
+  .float{ animation:floaty 6s ease-in-out infinite; }
+  .float.slow{ animation-duration:8s; }
+
+  /* chatbot */
+  #chatFab{ position:fixed; right:22px; bottom:22px; z-index:60; }
+  #chatFab .ping{ position:absolute; inset:0; border-radius:999px; background:var(--marigold); opacity:.55; animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite; z-index:-1; }
+  @keyframes ping{ 0%{ transform:scale(1); opacity:.5;} 80%,100%{ transform:scale(1.9); opacity:0;} }
+  #chatWin{ position:fixed; right:22px; bottom:92px; z-index:60; width:min(380px,calc(100vw - 32px)); height:min(560px,calc(100vh - 130px));
+    background:var(--paper); border-radius:22px; box-shadow:var(--shadow-lift); display:flex; flex-direction:column; overflow:hidden;
+    border:1px solid rgba(43,42,64,.08); transform:translateY(16px) scale(.96); opacity:0; pointer-events:none; transform-origin:bottom right;
+    transition:transform .28s cubic-bezier(.34,1.56,.64,1), opacity .2s; }
+  #chatWin.open{ transform:none; opacity:1; pointer-events:auto; }
+  .msg{ max-width:82%; padding:.7rem .9rem; border-radius:16px; font-size:.92rem; line-height:1.5; animation:rise .3s both; }
+  .msg.bot{ background:var(--teal-soft); color:var(--ink); border-bottom-left-radius:5px; align-self:flex-start; }
+  .msg.user{ background:var(--teal); color:#fff; border-bottom-right-radius:5px; align-self:flex-end; }
+  .qchip{ font-size:.82rem; font-weight:600; color:var(--teal-deep); background:#fff; border:1.5px solid rgba(108,92,231,.28);
+    padding:.4rem .7rem; border-radius:999px; cursor:pointer; transition:all .15s; }
+  .qchip:hover{ background:var(--teal-soft); transform:translateY(-1px); }
+  .typing span{ display:inline-block; width:7px; height:7px; margin:0 1px; background:var(--teal); border-radius:50%; opacity:.4; animation:blink 1.2s infinite; }
+  .typing span:nth-child(2){ animation-delay:.2s; } .typing span:nth-child(3){ animation-delay:.4s; }
+  @keyframes blink{ 0%,100%{ opacity:.3; transform:translateY(0);} 50%{ opacity:1; transform:translateY(-3px);} }
+
+  .link-soft{ color:var(--teal-deep); font-weight:600; text-decoration:underline; text-decoration-color:rgba(108,92,231,.35); text-underline-offset:3px; }
+  .link-soft:hover{ text-decoration-color:var(--marigold); }
+
+  /* language switch */
+  .lang-switch{ display:inline-flex; padding:3px; border-radius:999px; background:var(--teal-soft); gap:2px; }
+  .lang-switch button{ font-size:.8rem; font-weight:600; color:var(--teal-deep); padding:.35rem .7rem; border-radius:999px; cursor:pointer; transition:background .2s, color .2s; }
+  .lang-switch button:hover{ background:rgba(255,255,255,.75); }
+  .lang-switch button[aria-pressed="true"]{ background:var(--teal); color:#fff; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+
+<body>
+<div class="bg-canvas"></div>
+<div class="bg-grain"></div>
+
+<!-- ===================== NAV ===================== -->
+<div id="siteNotice" class="hidden bg-teal-soft text-teal-deep text-center text-[.88rem] font-medium leading-relaxed px-4 py-2" role="status" aria-label="Clinic announcement"></div>
+<header class="sticky top-0 z-50">
+  <div id="navbar" class="transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-5 md:px-8">
+      <nav class="flex items-center justify-between h-[70px]">
+        <a href="#top" class="flex items-center gap-2.5 group">
+          <span class="grid place-items-center w-10 h-10 rounded-2xl bg-teal text-white shadow-[var(--shadow-soft)]">
+            <!-- stethoscope-heart mark -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M6 3H4M14 3h2"/><circle cx="18" cy="15" r="2.4"/><path d="M15.8 15.8c0 3-2.9 4.7-5 5.2-2.1-.5-5-2.2-5-5.2v-3.6"/></svg>
+          </span>
+          <span class="leading-tight">
+            <span class="block font-display font-semibold text-[1.12rem] text-ink">Dr. Emma Lawson, MD</span>
+            <span class="block text-[.74rem] text-ink-soft font-medium -mt-0.5">Lawson Pediatrics · Austin, TX</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-[.95rem]">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Care</a>
+          <a href="#visit" class="nav-link">Your visit</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en">EN</button><button type="button" data-lang="es" lang="es">ES</button></div>
+          <a href="#book" class="btn btn-primary !py-2.5 !px-5 text-[.92rem]">Book online</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden grid place-items-center w-11 h-11 rounded-xl bg-white/70 border border-black/5" aria-label="Open menu" aria-expanded="false">
+          <svg id="menuIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B2A40" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- mobile drawer -->
+  <div id="mobileMenu" class="md:hidden hidden px-5">
+    <div class="card p-3 mt-1 flex flex-col">
+      <a href="#about" class="mob-link px-4 py-3 rounded-xl hover:bg-teal-soft font-medium">About</a>
+      <a href="#services" class="mob-link px-4 py-3 rounded-xl hover:bg-teal-soft font-medium">Care</a>
+      <a href="#visit" class="mob-link px-4 py-3 rounded-xl hover:bg-teal-soft font-medium">Your visit</a>
+      <a href="#faq" class="mob-link px-4 py-3 rounded-xl hover:bg-teal-soft font-medium">FAQ</a>
+      <a href="#contact" class="mob-link px-4 py-3 rounded-xl hover:bg-teal-soft font-medium">Contact</a>
+      <div class="lang-switch self-start mx-4 my-2" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="es" lang="es">Español</button></div>
+      <a href="#book" class="mob-link btn btn-primary justify-center mt-2">Book online</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="max-w-6xl mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-8">
+  <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-10 lg:gap-8 items-center">
+    <div class="hero-rise">
+      <span class="eyebrow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.1 7.7l5.4-.8z"/></svg>
+        Board-certified pediatrician · accepting new patients
+      </span>
+      <h1 class="mt-4 text-[2.6rem] sm:text-[3.2rem] lg:text-[3.5rem] leading-[1.05] font-semibold text-ink">
+        Warm, expert care for every stage of childhood.
+      </h1>
+      <p class="mt-5 text-[1.08rem] text-ink-soft leading-relaxed max-w-[46ch]">
+        Dr. Emma Lawson cares for newborns, children, and teens with unhurried visits and a team that truly listens. Same-day sick appointments, gentle check-ups, and guidance you can trust.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#book" class="btn btn-sun">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Book online
+        </a>
+        <a href="#about" class="btn btn-ghost">Meet Dr. Lawson</a>
+      </div>
+
+      <div class="mt-9 grid grid-cols-3 gap-4 max-w-md items-center">
+        <div>
+          <div class="font-display text-[1.7rem] font-semibold text-teal-deep">15+</div>
+          <div class="text-[.82rem] text-ink-soft leading-tight mt-0.5">years in pediatrics</div>
+        </div>
+        <div>
+          <div class="font-display text-[1.35rem] font-semibold text-teal-deep leading-snug">Birth to 18</div>
+          <div class="text-[.82rem] text-ink-soft leading-tight mt-0.5">every stage of childhood</div>
+        </div>
+        <div>
+          <div class="font-display text-[1.7rem] font-semibold text-teal-deep">6 days</div>
+          <div class="text-[.82rem] text-ink-soft leading-tight mt-0.5">open each week</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero visual -->
+    <div class="relative">
+      <div class="blob w-full aspect-square max-w-[460px] mx-auto relative overflow-hidden shadow-[var(--shadow-lift)]"
+           style="background:linear-gradient(150deg,#1c8f85,#5244B8);">
+        <img src="dr-baby.jpg" alt="Dr. Emma Lawson checking a smiling toddler" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(84,72,160,.28), transparent 42%);"></div>
+      </div>
+
+      <!-- floating chips -->
+      <div class="absolute -left-1 sm:left-2 top-8 float">
+        <div class="card px-4 py-3 flex items-center gap-3">
+          <span class="grid place-items-center w-9 h-9 rounded-full bg-teal-soft text-teal-deep">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg>
+          </span>
+          <div class="leading-tight">
+            <div class="text-[.72rem] text-ink-soft">Next available</div>
+            <div class="text-[.92rem] font-semibold text-ink" id="nextSlot">Monday, 8:00 AM</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<section class="max-w-6xl mx-auto px-5 md:px-8 py-6">
+  <div class="card px-5 sm:px-8 py-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="flex items-center gap-3">
+      <span class="grid place-items-center w-11 h-11 rounded-xl bg-teal-soft text-teal-deep flex-none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+      <div><div class="font-semibold text-[.95rem]">Open 6 days</div><div class="text-[.82rem] text-ink-soft">Mon–Fri 8–5, Sat 9–12</div></div>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="grid place-items-center w-11 h-11 rounded-xl bg-teal-soft text-teal-deep flex-none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <div><div class="font-semibold text-[.95rem]">In South Austin</div><div class="text-[.82rem] text-ink-soft">1420 Maple Grove Ave, Suite 200</div></div>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="grid place-items-center w-11 h-11 rounded-xl bg-teal-soft text-teal-deep flex-none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+      <div><div class="font-semibold text-[.95rem]">Same-day sick visits</div><div class="text-[.82rem] text-ink-soft">Call (512) 555-0148</div></div>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="grid place-items-center w-11 h-11 rounded-xl bg-teal-soft text-teal-deep flex-none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <div><div class="font-semibold text-[.95rem]">Video visits</div><div class="text-[.82rem] text-ink-soft">See the doctor from home</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+  <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+    <div class="reveal relative">
+      <div class="rounded-[var(--r-lg)] overflow-hidden shadow-[var(--shadow-lift)] max-w-[460px] aspect-[4/5]">
+        <img src="dr-desk.jpg" alt="Dr. Emma Lawson at her desk" class="w-full h-full object-cover" />
+      </div>
+      <div class="card absolute -bottom-5 -right-2 sm:right-6 px-5 py-4 max-w-[220px]">
+        <div class="flex -space-x-2 mb-2">
+          <span class="w-8 h-8 rounded-full bg-marigold-soft border-2 border-white"></span>
+          <span class="w-8 h-8 rounded-full bg-teal-soft border-2 border-white"></span>
+          <span class="w-8 h-8 rounded-full bg-coral/30 border-2 border-white"></span>
+        </div>
+        <div class="text-[.85rem] text-ink-soft leading-snug">“She makes my kids feel safe — and answers every question.”</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="eyebrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>About the doctor</span>
+      <h2 class="mt-4 text-[2.1rem] md:text-[2.5rem] font-semibold leading-[1.1]">A pediatrician who treats the whole family, not just the chart.</h2>
+      <p class="mt-5 text-ink-soft leading-relaxed max-w-[54ch]">
+        Dr. Lawson has spent more than fifteen years helping families raise healthy, happy kids. She believes good pediatric care is a partnership: clear explanations, honest answers, and enough time to actually talk. From first checkups to teenage years, she is a steady hand parents can count on.
+      </p>
+
+      <ul class="mt-6 space-y-3">
+        <li class="flex items-start gap-3"><span class="mt-1 grid place-items-center w-5 h-5 rounded-full bg-teal text-white flex-none"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="text-ink-soft"><span class="text-ink font-semibold">Board-certified</span> in Pediatrics, American Board of Pediatrics</span></li>
+        <li class="flex items-start gap-3"><span class="mt-1 grid place-items-center w-5 h-5 rounded-full bg-teal text-white flex-none"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="text-ink-soft"><span class="text-ink font-semibold">Experienced with newborns</span> — gentle care from day one</span></li>
+        <li class="flex items-start gap-3"><span class="mt-1 grid place-items-center w-5 h-5 rounded-full bg-teal text-white flex-none"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="text-ink-soft"><span class="text-ink font-semibold">Bilingual visits</span> in English and Spanish</span></li>
+      </ul>
+
+      <a href="#book" class="btn btn-primary mt-8">Book online with Dr. Lawson</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+  <div class="reveal max-w-2xl">
+    <span class="eyebrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.1 7.7l5.4-.8z"/></svg>Care for every age</span>
+    <h2 class="mt-4 text-[2.1rem] md:text-[2.5rem] font-semibold leading-[1.1]">From first breaths to first jobs.</h2>
+    <p class="mt-4 text-ink-soft leading-relaxed">Comprehensive pediatric care under one roof, so your family sees a doctor who already knows your story.</p>
+  </div>
+
+  <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:auto-rows-[210px]">
+
+    <!-- Newborn — big photo tile (2x2) -->
+    <article class="reveal card col-span-2 md:row-span-2 relative overflow-hidden">
+      <img src="newborn.png" alt="A newborn in the first days of life" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#221D3A]/90 via-[#221D3A]/25 to-transparent"></div>
+      <div class="relative flex flex-col justify-end p-6 text-white min-h-[260px] md:h-full">
+        <span class="grid place-items-center w-11 h-11 rounded-2xl bg-white/15 mb-auto"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/><path d="M12 3c-1.5 2-4 2.5-4 5 0 1 .5 1.8 1 2.4M12 3c1.5 2 4 2.5 4 5 0 1-.5 1.8-1 2.4"/><path d="M7 20c0-2.8 2.2-5 5-5s5 2.2 5 5"/></svg></span>
+        <h3 class="font-display text-[1.3rem] font-semibold">Newborn &amp; first days</h3>
+        <p class="mt-1.5 text-white/85 text-[.9rem] leading-relaxed">A complete newborn exam in the first days, jaundice checks, feeding support, and reassurance for new parents.</p>
+      </div>
+    </article>
+
+    <!-- Breastfeeding — wide -->
+    <article class="reveal card col-span-2 p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-marigold-soft text-marigold mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+      <h3 class="font-display text-[1.15rem] font-semibold mt-3">Feeding &amp; nutrition</h3>
+      <p class="mt-1 text-ink-soft text-[.86rem] leading-relaxed">Breastfeeding and formula guidance, starting solids, and healthy eating for picky eaters.</p>
+    </article>
+
+    <!-- Growth — 1x1 -->
+    <article class="reveal card p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-teal-soft text-teal-deep mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></span>
+      <h3 class="font-display text-[1.1rem] font-semibold mt-3">Growth &amp; development</h3>
+      <p class="mt-1 text-ink-soft text-[.82rem] leading-relaxed">Milestones and vaccines, birth to 18.</p>
+    </article>
+
+    <!-- Infections — 1x1 -->
+    <article class="reveal card p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-marigold-soft text-marigold mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+      <h3 class="font-display text-[1.1rem] font-semibold mt-3">Infections &amp; digestion</h3>
+      <p class="mt-1 text-ink-soft text-[.82rem] leading-relaxed">Infections, diarrhea, constipation, colic &amp; reflux.</p>
+    </article>
+
+    <!-- Kidney — 1x1 -->
+    <article class="reveal card p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-teal-soft text-teal-deep mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.4-6-11.4z"/></svg></span>
+      <h3 class="font-display text-[1.1rem] font-semibold mt-3">Kidney &amp; urinary</h3>
+      <p class="mt-1 text-ink-soft text-[.82rem] leading-relaxed">Urinary infections and bedwetting.</p>
+    </article>
+
+    <!-- Asthma — 1x1 -->
+    <article class="reveal card p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-marigold-soft text-marigold mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10.5a2.5 2.5 0 1 0-2.5-2.5"/><path d="M3 12h15.5a2.5 2.5 0 1 1-2.5 2.5"/><path d="M3 16h8"/></svg></span>
+      <h3 class="font-display text-[1.1rem] font-semibold mt-3">Asthma &amp; allergies</h3>
+      <p class="mt-1 text-ink-soft text-[.82rem] leading-relaxed">Asthma, eczema, respiratory &amp; skin allergies.</p>
+    </article>
+
+    <!-- Respiratory — wide -->
+    <article class="reveal card col-span-2 p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-teal-soft text-teal-deep mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+      <h3 class="font-display text-[1.15rem] font-semibold mt-3">Respiratory &amp; ear</h3>
+      <p class="mt-1 text-ink-soft text-[.86rem] leading-relaxed">Lung and airway infections (croup and bronchiolitis) and ear infections.</p>
+    </article>
+
+    <!-- Puberty — wide -->
+    <article class="reveal card col-span-2 p-5 flex flex-col overflow-hidden">
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-marigold-soft text-marigold mb-auto"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></span>
+      <h3 class="font-display text-[1.15rem] font-semibold mt-3">Puberty &amp; adolescence</h3>
+      <p class="mt-1 text-ink-soft text-[.86rem] leading-relaxed">Periodic exams, puberty assessment, nutrition &amp; hygiene, height-growth and obesity care.</p>
+    </article>
+
+    <!-- Ear piercing — wide, gold -->
+    <article class="reveal card col-span-2 p-5 flex flex-col overflow-hidden relative" style="background:linear-gradient(140deg,#FBE6DD,#FFFCFB);">
+      <span class="absolute top-4 right-4 text-[.72rem] font-semibold text-marigold bg-white/70 rounded-full px-2.5 py-1">Same day</span>
+      <span class="grid place-items-center w-11 h-11 rounded-2xl bg-marigold text-white mb-auto shadow-[var(--shadow-soft)]"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 12h6M12 9v6"/></svg></span>
+      <h3 class="font-display text-[1.15rem] font-semibold mt-3">School &amp; sports physicals</h3>
+      <p class="mt-1 text-ink-soft text-[.86rem] leading-relaxed">School, camp and sports forms filled in at the visit, plus vision and hearing checks.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS (genuine sequence) ===================== -->
+<section id="visit" class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+  <div class="rounded-[var(--r-lg)] px-6 sm:px-10 py-12 relative overflow-hidden" style="background:linear-gradient(155deg,#5244B8,#6C5CE7);">
+    <div class="relative z-10">
+      <div class="reveal max-w-xl">
+        <span class="eyebrow text-marigold-soft"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F6A08C"><circle cx="12" cy="12" r="10"/></svg><span class="text-white/80">Your visit, step by step</span></span>
+        <h2 class="mt-4 text-[2rem] md:text-[2.4rem] font-semibold text-white leading-[1.12]">Online booking is simple.</h2>
+      </div>
+      <div class="mt-9 grid md:grid-cols-3 gap-6">
+        <div class="reveal">
+          <div class="flex items-center gap-3">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-marigold text-ink font-display font-bold">1</span>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+          <h3 class="mt-4 font-display text-[1.25rem] font-semibold text-white">Choose a time</h3>
+          <p class="mt-2 text-white/75 leading-relaxed text-[.96rem]">Pick a day to see its open times, then enter your name, your child's date of birth and your mobile number.</p>
+        </div>
+        <div class="reveal">
+          <div class="flex items-center gap-3">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-marigold text-ink font-display font-bold">2</span>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+          <h3 class="mt-4 font-display text-[1.25rem] font-semibold text-white">We confirm</h3>
+          <p class="mt-2 text-white/75 leading-relaxed text-[.96rem]">Your request reaches our front desk and you get a confirmation text. Need to change it? Reschedule or cancel from that text.</p>
+        </div>
+        <div class="reveal">
+          <div class="flex items-center gap-3">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-marigold text-ink font-display font-bold">3</span>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+          <h3 class="mt-4 font-display text-[1.25rem] font-semibold text-white">Come on in</h3>
+          <p class="mt-2 text-white/75 leading-relaxed text-[.96rem]">Arrive to a calm, kid-friendly office, or join your video visit from home.</p>
+        </div>
+      </div>
+    </div>
+    <div class="absolute -right-16 -top-16 w-64 h-64 blob opacity-20" style="background:#F6A08C;"></div>
+  </div>
+</section>
+
+<!-- ===================== BOOKING ===================== -->
+<section id="book" class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+  <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-8 items-start">
+    <!-- reassurance -->
+    <div class="reveal">
+      <span class="eyebrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Online booking</span>
+      <h2 class="mt-4 text-[2.1rem] md:text-[2.5rem] font-semibold leading-[1.1]">Pick a time that works for you.</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed max-w-[46ch]">First choose a day to see its open times. Then enter your name, your child's date of birth and your mobile number. We'll text you to confirm.</p>
+
+      <div class="mt-7 space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="grid place-items-center w-10 h-10 rounded-xl bg-teal-soft text-teal-deep flex-none"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><div class="font-semibold">Prefer to call?</div><a href="tel:+15125550148" class="link-soft">(512) 555-0148</a><span class="text-ink-soft text-[.9rem]">, Mon–Fri 8 AM–5 PM, Sat 9 AM–12 PM</span></div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="grid place-items-center w-10 h-10 rounded-xl bg-marigold-soft text-marigold flex-none"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 8v4M12 16h.01"/></svg></span>
+          <div><div class="font-semibold">Is it urgent?</div><span class="text-ink-soft text-[.9rem]">For a medical emergency call <strong>911</strong>. After hours, our nurse line answers on the main number.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scheduler -->
+    <div class="reveal card p-5 sm:p-7">
+      <div class="mb-5">
+        <div class="text-[.78rem] text-ink-soft mb-2">Visit type</div>
+        <div id="visitType" class="grid grid-cols-3 gap-2">
+          <button type="button" class="vt-btn" data-type="in-person">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg>
+            <span>In-person</span>
+          </button>
+          <button type="button" class="vt-btn" data-type="video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Video visit</span>
+          </button>
+          <button type="button" class="vt-btn" data-type="text">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Phone call</span>
+          </button>
+        </div>
+        <div id="onlineNote" class="hidden mt-2 text-[.8rem] text-ink-soft leading-relaxed bg-teal-soft/60 rounded-xl px-3 py-2">
+          We text you a secure video link 10 minutes before the visit. No app to install.
+        </div>
+      </div>
+      <div id="feeNote" class="hidden -mt-3 mb-4 text-[.84rem] text-ink-soft">Visit fee: <span class="font-semibold text-ink"></span></div>
+      <div id="scheduler">
+        <div class="mb-3">
+          <div class="font-display text-[1.05rem] font-semibold text-ink">Choose a day</div>
+          <div class="text-[.78rem] text-ink-soft">The week ahead</div>
+        </div>
+        <div id="dayRow" class="grid grid-cols-4 sm:grid-cols-7 gap-2"></div>
+        <div id="slotPanel" class="mt-5"></div>
+      </div>
+
+      <div id="pickHint" class="mt-5 pt-5 border-t border-black/5 text-center text-ink-soft text-[.92rem]">
+        Pick a day and time, then enter your details.
+      </div>
+
+      <form id="bookForm" class="hidden mt-5 pt-5 border-t border-black/5" novalidate>
+        <div class="flex items-center justify-between gap-3 mb-5 bg-teal-soft rounded-2xl px-4 py-3">
+          <div class="flex items-center gap-3">
+            <span class="grid place-items-center w-9 h-9 rounded-full bg-teal text-white flex-none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div class="leading-tight">
+              <div class="text-[.74rem] text-ink-soft">Your appointment</div>
+              <div id="pickSummary" class="font-semibold text-ink"></div>
+            </div>
+          </div>
+          <button type="button" id="changePick" class="link-soft text-[.85rem]">Change</button>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="lbl" for="name">Parent or guardian name <span class="req">*</span></label>
+            <input class="field" id="name" name="name" type="text" placeholder="e.g. Sarah Miller" required>
+          </div>
+          <div>
+            <label class="lbl" for="dob">Child's date of birth <span class="req">*</span></label>
+            <input class="field" id="dob" name="dob" type="date" required>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label class="lbl" for="phone">Mobile number <span class="req">*</span></label>
+            <input class="field" id="phone" name="phone" type="tel" inputmode="tel" placeholder="(555) 000-0000" required>
+          </div>
+          <div>
+            <label class="lbl" for="email">Email <span class="text-ink-soft text-[.78rem]">(optional)</span></label>
+            <input class="field" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+        </div>
+        <div class="mt-4">
+          <label class="lbl" for="insurance">Insurance <span class="text-ink-soft text-[.78rem]">(optional)</span></label>
+          <input class="field" id="insurance" name="insurance" type="text" placeholder="e.g. Blue Cross, Medicaid, CHIP, self-pay">
+        </div>
+        <div id="formError" class="hidden mt-4 text-[.9rem] text-[#c0492f] bg-[#fbe7e2] border border-[#f2c2b7] rounded-xl px-4 py-3"></div>
+        <button type="submit" class="btn btn-sun w-full justify-center mt-5 !py-3.5 text-[1.02rem]">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Confirm appointment
+        </button>
+        <p class="text-[.8rem] text-ink-soft text-center mt-3">We'll text you to confirm. Nothing to pay online.</p>
+      </form>
+
+      <!-- success state -->
+      <div id="bookSuccess" class="hidden text-center py-6">
+        <div class="mx-auto grid place-items-center w-16 h-16 rounded-full bg-teal-soft text-teal mb-4">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 class="font-display text-[1.5rem] font-semibold">You're booked!</h3>
+        <p class="mt-2 text-ink-soft max-w-[42ch] mx-auto" id="successMsg"></p>
+        <button id="bookAgain" class="btn btn-ghost mt-6">Book another time</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+  <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-8 items-center mb-10">
+    <div class="reveal max-w-2xl">
+      <span class="eyebrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.1 7.7l5.4-.8z"/></svg>Loved by local families</span>
+      <h2 class="mt-4 text-[2.1rem] md:text-[2.5rem] font-semibold leading-[1.1]">Parents feel the difference.</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">Here's what parents say after their child sees Dr. Lawson.</p>
+    </div>
+    <div class="reveal rounded-[var(--r-lg)] overflow-hidden shadow-[var(--shadow-lift)] aspect-[5/4]">
+      <img src="clinic-lobby.jpg" alt="The waiting room at Lawson Pediatrics" class="w-full h-full object-cover" />
+    </div>
+  </div>
+  <div class="grid md:grid-cols-3 gap-5">
+    <figure class="reveal card p-6">
+      <div class="text-marigold text-[1.1rem]">★★★★★</div>
+      <blockquote class="mt-3 text-ink-soft leading-relaxed">“Dr. Lawson never rushes us. She explains everything so my son isn't scared, and she remembers the little details from our last visit.”</blockquote>
+      <figcaption class="mt-4 font-semibold text-[.95rem]">Sarah M. <span class="text-ink-soft font-normal">— mom of two</span></figcaption>
+    </figure>
+    <figure class="reveal card p-6" style="background:linear-gradient(160deg,#FCE6DD,#FDFDFF);">
+      <div class="text-marigold text-[1.1rem]">★★★★★</div>
+      <blockquote class="mt-3 text-ink-soft leading-relaxed">“We got a same-day appointment when our daughter spiked a fever. Calm, kind, and we left with a clear plan. Exactly what you want.”</blockquote>
+      <figcaption class="mt-4 font-semibold text-[.95rem]">Daniel R. <span class="text-ink-soft font-normal">— dad</span></figcaption>
+    </figure>
+    <figure class="reveal card p-6">
+      <div class="text-marigold text-[1.1rem]">★★★★★</div>
+      <blockquote class="mt-3 text-ink-soft leading-relaxed">“As first-time parents we had a hundred questions. She answered every one without making us feel silly. Our whole family trusts her.”</blockquote>
+      <figcaption class="mt-4 font-semibold text-[.95rem]">Maria &amp; Josh <span class="text-ink-soft font-normal">— new parents</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+  <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-10">
+    <div class="reveal">
+      <span class="eyebrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" stroke-linecap="round"/><path d="M12 17h.01" stroke-linecap="round"/></svg>Good questions</span>
+      <h2 class="mt-4 text-[2.1rem] md:text-[2.5rem] font-semibold leading-[1.1]">Answers before you book.</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">Still unsure about something? Ask the care assistant in the corner, or call us any weekday.</p>
+    </div>
+
+    <div class="reveal">
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false"><span>Do you accept new patients?</span><span class="acc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="acc-panel"><p>Yes. We welcome new patients from newborns through age 18.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false"><span>What should we bring to the first visit?</span><span class="acc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="acc-panel"><p>Please bring your insurance card, your child's vaccine record and a list of any medicines or allergies. Arriving 10 minutes early gives us time for the paperwork.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false"><span>My child is sick today. Can we be seen?</span><span class="acc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="acc-panel"><p>We keep same-day slots open for sick visits. Book through the form or call us early in the day. If this is a medical emergency, call 911.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false"><span>Which insurance do you accept?</span><span class="acc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="acc-panel"><p>We accept most major plans, plus Medicaid and CHIP. Add your plan when you book and we'll check your coverage before the visit.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false"><span>Is there help after the clinic closes?</span><span class="acc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="acc-panel"><p>Yes. Our nurse line answers evenings and weekends on the main number, and video visits run until 8 PM on weekdays.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / FOOTER ===================== -->
+<section id="contact" class="max-w-6xl mx-auto px-5 md:px-8 pt-8 pb-16">
+  <div class="card overflow-hidden">
+    <div class="grid md:grid-cols-2">
+      <div class="p-8 sm:p-10">
+        <span class="eyebrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Address &amp; contact</span>
+        <h2 class="mt-4 text-[1.9rem] md:text-[2.2rem] font-semibold leading-[1.12]">Come say hello.</h2>
+        <div class="mt-6 space-y-4 text-[.98rem]">
+          <div class="flex items-start gap-3"><span class="text-teal-deep mt-0.5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="font-semibold">Address</div><div class="text-ink-soft">1420 Maple Grove Ave, Suite 200<br>Austin, TX 78704</div><div class="mt-1.5 text-[.88rem] text-ink-soft">Free parking behind the building</div></div></div>
+          <div class="flex items-start gap-3"><span class="text-teal-deep mt-0.5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><div class="font-semibold">Phone</div><a href="tel:+15125550148" class="link-soft">(512) 555-0148</a></div></div>
+          <div class="flex items-start gap-3"><span class="text-teal-deep mt-0.5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><div class="font-semibold">Text us</div><a href="sms:+15125550172" class="link-soft">(512) 555-0172</a></div></div>
+          <div class="flex items-start gap-3"><span class="text-teal-deep mt-0.5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><div class="font-semibold">Hours</div><div class="text-ink-soft"><span>Mon–Fri 8 AM–5 PM, Sat 9 AM–12 PM</span><br><span>Closed on Sundays</span></div></div></div>
+        </div>
+        <a href="#book" class="btn btn-primary mt-7">Book online</a>
+      </div>
+      <!-- map placeholder -->
+      <div class="relative min-h-[320px] bg-teal-soft">
+        <img src="clinic-reception.jpg" alt="The front desk at Lawson Pediatrics" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 p-4 text-white text-[.84rem] font-medium" style="background:linear-gradient(to top, rgba(0,0,0,.6), transparent);">South Austin, Texas</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[.86rem] text-ink-soft">
+    <div class="flex items-center gap-2">
+      <span class="grid place-items-center w-8 h-8 rounded-xl bg-teal text-white"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><circle cx="18" cy="15" r="2.4"/><path d="M15.8 15.8c0 3-2.9 4.7-5 5.2-2.1-.5-5-2.2-5-5.2v-3.6"/></svg></span>
+      <span>© <span id="year"></span> Lawson Pediatrics. Demo site: the doctor, clinic and photos are fictional.</span>
+    </div>
+    <div class="text-center sm:text-right">This site is for information and scheduling. It is not medical advice. In an emergency, call 911.</div>
+  </footer>
+</section>
+
+</main>
+
+<!-- ===================== CHATBOT ===================== -->
+<button id="chatFab" class="btn btn-sun !p-0 w-16 h-16 !rounded-full justify-center relative" aria-label="Open care assistant">
+  <span class="ping"></span>
+  <svg id="fabOpen" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/><path d="M8.5 11.5h.01M12.5 11.5h.01M16.5 11.5h.01"/></svg>
+  <svg id="fabClose" class="hidden" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
+
+<div id="chatWin" role="dialog" aria-label="Care assistant" aria-modal="false">
+  <div class="px-4 py-3.5 flex items-center gap-3 text-white" style="background:linear-gradient(135deg,#6C5CE7,#5244B8);">
+    <span class="grid place-items-center w-10 h-10 rounded-full bg-white/15 flex-none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 22a7 7 0 0 1 14 0"/></svg></span>
+    <div class="leading-tight flex-1">
+      <div class="font-semibold">Care Assistant</div>
+      <div class="text-[.74rem] text-white/75 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-marigold inline-block"></span>Hours, booking &amp; visit info</div>
+    </div>
+    <button id="chatClose" class="text-white/80 hover:text-white p-1" aria-label="Close">✕</button>
+  </div>
+
+  <div id="chatBody" class="flex-1 overflow-y-auto p-4 flex flex-col gap-3" style="background:linear-gradient(180deg,#FDFDFF,#F0EFF9);"></div>
+
+  <div id="quickReplies" class="px-3 pt-2 flex flex-wrap gap-2 border-t border-black/5"></div>
+
+  <form id="chatForm" class="p-3 flex items-center gap-2 border-t border-black/5">
+    <input id="chatInput" class="field !rounded-full !py-2.5 flex-1" placeholder="Type your question…" autocomplete="off" aria-label="Message">
+    <button class="btn btn-primary !p-0 w-11 h-11 !rounded-full justify-center flex-none" aria-label="Send"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+  </form>
+  <div class="px-4 pb-2 text-[.68rem] text-ink-soft text-center">Not medical advice. For emergencies call 911.</div>
+</div>
+
+<script src="i18n.es.js"></script>
+<script src="i18n.js"></script>
+<script>
+/* Lawson Pediatrics demo: page behaviour. Static (no backend): bookings are kept in this browser only.
+   Text goes through T() (i18n.js) so the page works in English and Spanish. */
+const ES_ON = window.LANG === 'es';
+const LOC = ES_ON ? 'es-US' : 'en-US';
+const L = (en, es) => ES_ON ? es : en;
+
+/* ---------- year ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- navbar shadow on scroll ---------- */
+const navbar = document.getElementById('navbar');
+addEventListener('scroll', () => {
+  const on = scrollY > 12;
+  ['bg-paper/80','backdrop-blur-md','shadow-[0_6px_24px_-16px_rgba(84,72,160,.4)]','border-b','border-black/5'].forEach(c => navbar.classList.toggle(c, on));
+}, {passive:true});
+
+/* ---------- mobile menu ---------- */
+const menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('hidden') === false;
+  menuBtn.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded','false');
+}));
+
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- accordion ---------- */
+document.querySelectorAll('.acc-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = btn.nextElementSibling;
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.acc-btn').forEach(b => {
+      if (b !== btn){ b.setAttribute('aria-expanded','false'); b.nextElementSibling.style.maxHeight = null; }
+    });
+    btn.setAttribute('aria-expanded', !open);
+    panel.style.maxHeight = open ? null : panel.scrollHeight + 'px';
+  });
+});
+
+/* ---------- booking: weekly slot picker ---------- */
+(function(){
+  // Hours per weekday (getDay: Sun=0 … Sat=6) → [startH, endH]. Missing weekday = closed.
+  const HOURS = { 1:[8,17], 2:[8,17], 3:[8,17], 4:[8,17], 5:[8,17], 6:[9,12] };
+  const STEP = 30, DAYS_AHEAD = 7;
+  const slotsBetween = (s,e) => { const a=[]; for (let m=s*60; m<e*60; m+=STEP) a.push(String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')); return a; };
+
+  const dayRow = document.getElementById('dayRow'), slotPanel = document.getElementById('slotPanel');
+  const hint = document.getElementById('pickHint'), form = document.getElementById('bookForm');
+  const summary = document.getElementById('pickSummary'), errBox = document.getElementById('formError');
+  const success = document.getElementById('bookSuccess'), successMsg = document.getElementById('successMsg');
+  const STORE = 'lawsonDemoBookings';
+  const saved = () => { try { return JSON.parse(localStorage.getItem(STORE) || '[]'); } catch(_) { return []; } };
+  const bookedSlots = () => new Set(saved().map(b => b.date + ' ' + b.time));
+
+  let selected = null, selectedDayISO = null, visitType = 'in-person';
+  const vtButtons = [...document.querySelectorAll('#visitType .vt-btn')];
+  const onlineNote = document.getElementById('onlineNote');
+  const NOTES = {
+    video: L('We text you a secure video link 10 minutes before the visit. No app to install.', 'Le enviamos un enlace de video seguro por mensaje de texto 10 minutos antes de la consulta. No necesita instalar nada.'),
+    text:  L('The doctor or a nurse calls you at the booked time. Good for follow-ups and quick questions.', 'La doctora o una enfermera le llama a la hora reservada. Ideal para seguimientos y dudas rápidas.'),
+  };
+  function renderVisitType(){
+    vtButtons.forEach(b => {
+      const on = b.dataset.type === visitType;
+      b.setAttribute('aria-pressed', on);
+      b.className = 'vt-btn flex flex-col items-center justify-center gap-1 rounded-2xl py-3 px-1 text-[.8rem] font-medium transition ' +
+        (on ? 'bg-teal text-white shadow-[var(--shadow-soft)]' : 'bg-teal-soft text-teal-deep hover:bg-teal/15');
+    });
+    const online = visitType !== 'in-person';
+    onlineNote.classList.toggle('hidden', !online);
+    if (online) onlineNote.textContent = NOTES[visitType] || '';
+  }
+  vtButtons.forEach(b => b.addEventListener('click', () => { visitType = b.dataset.type; renderVisitType(); }));
+  renderVisitType();
+
+  const startOfToday = () => { const d = new Date(); d.setHours(0,0,0,0); return d; };
+  const iso = d => { const x=new Date(d); x.setMinutes(x.getMinutes()-x.getTimezoneOffset()); return x.toISOString().split('T')[0]; };
+  const fmtTime = t => { const [h,m] = t.split(':').map(Number); const d = new Date(2026,0,1,h,m); return d.toLocaleTimeString(LOC,{hour:'numeric', minute:'2-digit'}); };
+  const longDate = d => d.toLocaleDateString(LOC,{weekday:'long', month:'long', day:'numeric'});
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const setErr = (el,on) => el.classList.toggle('err', on);
+
+  const isClosedDay = day => !HOURS[day.getDay()];
+  function openSlots(day, dISO){
+    if (isClosedDay(day)) return [];
+    const taken = bookedSlots(), h = HOURS[day.getDay()];
+    return slotsBetween(h[0], h[1]).filter(t => new Date(dISO+'T'+t+':00') > new Date() && !taken.has(dISO+' '+t));
+  }
+
+  function renderDays(){
+    dayRow.innerHTML = '';
+    const base = startOfToday(), todayISO = iso(base);
+    for (let i=0;i<DAYS_AHEAD;i++){
+      const day = new Date(base); day.setDate(day.getDate()+i);
+      const dISO = iso(day), closed = isClosedDay(day), avail = closed ? [] : openSlots(day, dISO);
+      const disabled = closed || !avail.length, isSel = dISO === selectedDayISO;
+      const b = document.createElement('button');
+      b.type = 'button'; b.disabled = disabled;
+      b.className = 'rounded-2xl py-2.5 px-1 text-center transition ' +
+        (isSel ? 'bg-teal text-white shadow-[var(--shadow-soft)]'
+         : disabled ? 'bg-black/[.03] text-ink-soft/45 cursor-not-allowed'
+         : 'bg-teal-soft text-teal-deep hover:bg-teal hover:text-white');
+      const wd = dISO === todayISO ? L('Today','Hoy') : cap(day.toLocaleDateString(LOC,{weekday:'short'}).replace('.',''));
+      const dl = day.toLocaleDateString(LOC,{month:'short',day:'numeric'}).replace('.','');
+      const sub = closed ? L('Closed','Cerrado') : (!avail.length ? L('Full','Lleno') : '');
+      b.innerHTML = `<div class="text-[.7rem] ${isSel?'text-white/85':''}">${wd}</div>
+                     <div class="text-[.95rem] font-semibold leading-tight mt-0.5">${dl}</div>
+                     ${sub?`<div class="text-[.64rem] mt-0.5 ${isSel?'text-white/80':'text-ink-soft/60'}">${sub}</div>`:''}`;
+      if (!disabled) b.addEventListener('click', () => selectDay(dISO));
+      dayRow.appendChild(b);
+    }
+  }
+
+  function renderSlots(){
+    slotPanel.innerHTML = '';
+    if (!selectedDayISO){
+      slotPanel.innerHTML = `<div class="text-center text-[.85rem] text-ink-soft/70 py-4">${L('Choose a day to see available times.','Elija un día para ver los horarios disponibles.')}</div>`;
+      return;
+    }
+    const day = new Date(selectedDayISO+'T00:00:00'), avail = openSlots(day, selectedDayISO);
+    const head = document.createElement('div');
+    head.className = 'text-[.82rem] text-ink-soft mb-2.5';
+    head.textContent = L('Available times, ','Horarios disponibles, ') + longDate(day);
+    slotPanel.appendChild(head);
+    if (!avail.length){
+      const none = document.createElement('div');
+      none.className = 'text-center text-[.85rem] text-ink-soft/70 py-3 rounded-xl bg-black/[.02]';
+      none.textContent = L('No open times on this day.','No hay horarios libres este día.');
+      return void slotPanel.appendChild(none);
+    }
+    const wrap = document.createElement('div');
+    wrap.className = 'grid grid-cols-3 sm:grid-cols-4 gap-2';
+    avail.forEach(t => {
+      const isSel = selected && selected.iso===selectedDayISO && selected.time===t;
+      const b = document.createElement('button');
+      b.type='button'; b.textContent = fmtTime(t);
+      b.className = 'text-[.82rem] font-medium rounded-xl py-2.5 transition ' +
+        (isSel ? 'bg-teal text-white shadow-[var(--shadow-soft)]' : 'bg-teal-soft text-teal-deep hover:bg-teal hover:text-white');
+      b.addEventListener('click', () => pick(day, selectedDayISO, t));
+      wrap.appendChild(b);
+    });
+    slotPanel.appendChild(wrap);
+  }
+
+  function selectDay(dISO){ selectedDayISO = dISO; renderDays(); renderSlots(); slotPanel.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+
+  function init(){
+    let firstISO = null, firstTime = null;
+    const base = startOfToday();
+    for (let i=0;i<DAYS_AHEAD;i++){
+      const day = new Date(base); day.setDate(day.getDate()+i);
+      const slots = openSlots(day, iso(day));
+      if (slots.length){ firstISO = iso(day); firstTime = slots[0]; break; }
+    }
+    if (!selectedDayISO && firstISO) selectedDayISO = firstISO;
+    const badge = document.getElementById('nextSlot');
+    if (badge) badge.textContent = firstISO ? cap(new Date(firstISO+'T00:00:00').toLocaleDateString(LOC,{weekday:'long'})) + ', ' + fmtTime(firstTime) : L('Call us','Llámenos');
+    renderDays(); renderSlots();
+  }
+
+  function pick(day, dISO, time){
+    selected = { iso:dISO, time, date:new Date(dISO+'T'+time+':00') };
+    renderSlots();
+    hint.classList.add('hidden'); success.classList.add('hidden'); form.classList.remove('hidden');
+    summary.textContent = cap(longDate(day)) + ' · ' + fmtTime(time);
+    form.scrollIntoView({behavior:'smooth', block:'center'});
+    setTimeout(()=>document.getElementById('name').focus({preventScroll:true}), 300);
+  }
+
+  document.getElementById('changePick').addEventListener('click', () => {
+    form.classList.add('hidden'); hint.classList.remove('hidden');
+    document.getElementById('scheduler').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+  form.querySelectorAll('.field').forEach(el => el.addEventListener('input', () => setErr(el,false)));
+  const dob = document.getElementById('dob');
+  dob.max = iso(new Date());
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name'), phone = document.getElementById('phone'), email = document.getElementById('email');
+    let bad = false;
+    if (!name.value.trim()){ setErr(name,true); bad=true; }
+    const born = dob.value ? new Date(dob.value+'T00:00:00') : null, age = born ? (Date.now()-born)/31557600000 : -1;
+    if (!born || age < 0 || age > 21){ setErr(dob,true); bad=true; }
+    if (phone.value.replace(/\D/g,'').length < 10){ setErr(phone,true); bad=true; }
+    if (email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){ setErr(email,true); bad=true; }
+    if (bad || !selected){
+      errBox.textContent = !selected ? L('Please pick a time above first.','Primero elija un horario.')
+        : L("Please enter your name, your child's date of birth and a 10-digit mobile number.", 'Escriba su nombre, la fecha de nacimiento de su hijo o hija y un número de celular de 10 dígitos.');
+      return void errBox.classList.remove('hidden');
+    }
+    errBox.classList.add('hidden');
+    const all = saved(); all.push({ date:selected.iso, time:selected.time, type:visitType });
+    try { localStorage.setItem(STORE, JSON.stringify(all)); } catch(_){}
+    const first = name.value.trim().split(' ')[0], when = longDate(selected.date) + L(' at ',' a las ') + fmtTime(selected.time);
+    successMsg.textContent = visitType === 'video'
+      ? L(`Thanks, ${first}! Your video visit is set for ${when}. We'll text you the secure link before it starts.`, `¡Gracias, ${first}! Su videoconsulta es el ${when}. Le enviaremos el enlace seguro antes de empezar.`)
+      : L(`Thanks, ${first}! Your appointment is set for ${when}. We'll text your mobile to confirm.`, `¡Gracias, ${first}! Su cita es el ${when}. Le enviaremos un mensaje de texto para confirmarla.`);
+    form.classList.add('hidden'); success.classList.remove('hidden');
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  document.getElementById('bookAgain').addEventListener('click', () => {
+    form.reset(); selected = null; selectedDayISO = null; visitType = 'in-person'; renderVisitType();
+    success.classList.add('hidden'); hint.classList.remove('hidden'); init();
+    document.getElementById('scheduler').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+  init();
+})();
+
+/* =====================================================
+   CARE ASSISTANT (scripted demo, no medical advice)
+   ===================================================== */
+const chatFab = document.getElementById('chatFab'), chatWin = document.getElementById('chatWin');
+const chatBody = document.getElementById('chatBody'), chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput'), quickWrap = document.getElementById('quickReplies');
+const fabOpen = document.getElementById('fabOpen'), fabClose = document.getElementById('fabClose');
+let greeted = false;
+const PHONE = '<a class="link-soft" href="tel:+15125550148">(512) 555-0148</a>';
+const DEFAULT_CHIPS = ES_ON ? ['Pedir una cita','Horario','¿Dónde están?','Seguro médico','¿Qué edades?'] : ['Book a visit','Opening hours','Where are you?','Insurance','What ages?'];
+
+function toggleChat(open){
+  const isOpen = open ?? !chatWin.classList.contains('open');
+  chatWin.classList.toggle('open', isOpen);
+  fabOpen.classList.toggle('hidden', isOpen); fabClose.classList.toggle('hidden', !isOpen);
+  chatFab.setAttribute('aria-label', isOpen ? L('Close care assistant','Cerrar asistente') : L('Open care assistant','Abrir asistente'));
+  if (isOpen){
+    if (!greeted){
+      greeted = true;
+      botSay(L("Hi! I'm the care assistant for Dr. Lawson's office. I can help with appointments, hours, location, insurance and what to expect. What do you need?",
+               '¡Hola! Soy el asistente del consultorio de la Dra. Lawson. Puedo ayudarle con citas, horarios, ubicación, seguros y qué esperar. ¿En qué le ayudo?'));
+      renderChips(DEFAULT_CHIPS);
+    }
+    setTimeout(() => chatInput.focus(), 300);
+  }
+}
+chatFab.addEventListener('click', () => toggleChat());
+document.getElementById('chatClose').addEventListener('click', () => toggleChat(false));
+addEventListener('keydown', e => { if (e.key === 'Escape' && chatWin.classList.contains('open')) toggleChat(false); });
+
+function bubble(html, who){ const el = document.createElement('div'); el.className = 'msg ' + who; el.innerHTML = html; chatBody.appendChild(el); chatBody.scrollTop = chatBody.scrollHeight; return el; }
+const botSay = h => bubble(h, 'bot');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function renderChips(list){
+  quickWrap.innerHTML = '';
+  list.forEach(t => { const b = document.createElement('button'); b.type='button'; b.className='qchip'; b.textContent=t; b.addEventListener('click', () => handle(t)); quickWrap.appendChild(b); });
+}
+function typing(){ const el = bubble('<span></span><span></span><span></span>', 'bot typing'); return el; }
+
+function reply(text){
+  const t = text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const has = (...w) => w.some(x => t.includes(x));
+  if (has('emergency','911','not breathing','seizure','unconscious','choking','emergencia','no respira','convulsion'))
+    return {m:L('If this is a medical emergency, please call <strong>911</strong> now.','Si es una emergencia médica, llame al <strong>911</strong> ahora.'), chips:DEFAULT_CHIPS.slice(0,2)};
+  if (has('fever','cough','rash','vomit','diarrhea','sick','pain','hurt','symptom','sore throat','earache','medicine','dose','fiebre','tos','vomito','diarrea','enfermo','enferma','dolor','sintoma','medicina','dosis'))
+    return {m:L(`I can't give medical advice, but Dr. Lawson can. We keep <strong>same-day sick visits</strong> open: book one here or call ${PHONE}. For anything severe, call 911.`,
+                `No puedo dar consejos médicos, pero la Dra. Lawson sí. Tenemos <strong>citas el mismo día</strong> para niños enfermos: reserve aquí o llame al ${PHONE}. Si es grave, llame al 911.`), chips:DEFAULT_CHIPS.slice(0,2), action:'book'};
+  if (has('video','telehealth','online','en linea','videoconsulta'))
+    return {m:L('Yes! Choose <strong>Video visit</strong> in the booking form. We text you a secure link 10 minutes before. No app needed.',
+                '¡Sí! Elija <strong>Videoconsulta</strong> en el formulario. Le enviamos un enlace seguro 10 minutos antes. No necesita ninguna aplicación.'), chips:DEFAULT_CHIPS.slice(0,2)};
+  if (has('spanish','espanol','idioma','language'))
+    return {m:L('Yes, Dr. Lawson and our front desk speak <strong>English and Spanish</strong>.','Sí, la Dra. Lawson y nuestra recepción hablan <strong>inglés y español</strong>.'), chips:DEFAULT_CHIPS.slice(0,2)};
+  if (has('book','appointment','schedule','visit','cita','reserv','consulta'))
+    return {m:L(`Happy to help! Pick a day and time in the <strong>booking form</strong> and we'll text you to confirm. Prefer to talk? Call ${PHONE}.`,
+                `¡Con gusto! Elija día y hora en el <strong>formulario de citas</strong> y le confirmaremos por mensaje de texto. ¿Prefiere hablar? Llame al ${PHONE}.`), action:'book', chips:DEFAULT_CHIPS.slice(1,3)};
+  if (has('hour','open','close','when','weekend','saturday','sunday','horario','abren','cierran','sabado','domingo'))
+    return {m:L('We\'re open <strong>Mon–Fri 8 AM–5 PM</strong> and <strong>Sat 9 AM–12 PM</strong>, closed Sundays. Our nurse line answers after hours on the main number.',
+                'Abrimos de <strong>lunes a viernes de 8 a. m. a 5 p. m.</strong> y los <strong>sábados de 9 a. m. a 12 p. m.</strong>; los domingos está cerrado. Fuera de horario, la línea de enfermería contesta en el número principal.'), chips:[DEFAULT_CHIPS[0], DEFAULT_CHIPS[2]]};
+  if (has('where','address','location','direction','parking','map','donde','direccion','ubicacion','estacionamiento'))
+    return {m:L('We\'re at <strong>1420 Maple Grove Ave, Suite 200, Austin, TX 78704</strong>, with free parking behind the building.',
+                'Estamos en <strong>1420 Maple Grove Ave, Suite 200, Austin, TX 78704</strong>, con estacionamiento gratis detrás del edificio.'), chips:DEFAULT_CHIPS.slice(0,2)};
+  if (has('insurance','medicaid','chip','cost','price','pay','bill','seguro','costo','precio','pagar'))
+    return {m:L('We accept most major plans, plus <strong>Medicaid and CHIP</strong>. Add your plan when you book and we\'ll check coverage before the visit.',
+                'Aceptamos la mayoría de los seguros, además de <strong>Medicaid y CHIP</strong>. Indique su plan al reservar y revisaremos su cobertura antes de la consulta.'), chips:DEFAULT_CHIPS.slice(0,2)};
+  if (has('age','how old','newborn','baby','teen','edad','bebe','recien nacido','adolescente'))
+    return {m:L('Dr. Lawson cares for <strong>newborns through age 18</strong>, from first check-ups and vaccines to teen health.',
+                'La Dra. Lawson atiende desde <strong>recién nacidos hasta los 18 años</strong>: primeras revisiones, vacunas y salud adolescente.'), chips:DEFAULT_CHIPS.slice(0,2)};
+  if (has('hello','hi','hey','hola','buenos','buenas'))
+    return {m:L('Hello! How can I help: booking a visit, hours, or something else?','¡Hola! ¿En qué le ayudo: una cita, el horario u otra cosa?'), chips:DEFAULT_CHIPS};
+  if (has('thank','gracias'))
+    return {m:L("You're welcome! Anything else?",'¡De nada! ¿Algo más?'), chips:DEFAULT_CHIPS};
+  return {m:L(`I can help with <strong>booking, hours, location, insurance, video visits and ages we see</strong>. For medical questions, please call ${PHONE}.`,
+              `Puedo ayudarle con <strong>citas, horarios, ubicación, seguros, videoconsultas y edades que atendemos</strong>. Para preguntas médicas, llame al ${PHONE}.`), chips:DEFAULT_CHIPS};
+}
+
+async function handle(text){
+  bubble(esc(text), 'user');
+  quickWrap.innerHTML = '';
+  const t = typing();
+  await new Promise(r => setTimeout(r, 650));
+  t.remove();
+  const r = reply(text);
+  botSay(r.m);
+  renderChips(r.chips || DEFAULT_CHIPS);
+  if (r.action === 'book') setTimeout(() => document.getElementById('book').scrollIntoView({behavior:'smooth'}), 900);
+}
+chatForm.addEventListener('submit', e => { e.preventDefault(); const v = chatInput.value.trim(); if (!v) return; chatInput.value = ''; handle(v); });
+</script>
+</body>
+</html>
